@@ -20,7 +20,7 @@
   animation: heroFade 15s infinite;
 }
 
-.hero__slide--1 { background-image: url("../assets/img/banner-1.jpg-1.jpg"); animation-delay: 0s; }
+.hero__slide--1 { background-image: url("../assets/img/banner-1.png"); animation-delay: 0s; }
 .hero__slide--2 { background-image: url("../assets/img/banner-2.jpg"); animation-delay: 5s; }
 .hero__slide--3 { background-image: url("../assets/img/banner-3.jpg"); animation-delay: 10s; }
 
@@ -238,4 +238,12 @@
 /* Responsive: formulario a 1 columna en móvil */
 @media (max-width: 640px){
   .form { grid-template-columns: 1fr; }
+}
+
+.product__media img {
+  width: 100%;
+  height: 320px;          /* o el alto que quieras */
+  object-fit: cover;      /* recorta sin deformar */
+  object-position: center;
+  border-radius: 8px;
 }
