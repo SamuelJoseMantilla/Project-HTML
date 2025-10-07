@@ -20,9 +20,9 @@
   animation: heroFade 15s infinite;
 }
 
-.hero__slide--1 { background-image: url("../assets/img/hero-1.jpg"); animation-delay: 0s; }
-.hero__slide--2 { background-image: url("../assets/img/hero-2.jpg"); animation-delay: 5s; }
-.hero__slide--3 { background-image: url("../assets/img/hero-3.jpg"); animation-delay: 10s; }
+.hero__slide--1 { background-image: url("../assets/img/banner-1.jpg-1.jpg"); animation-delay: 0s; }
+.hero__slide--2 { background-image: url("../assets/img/banner-2.jpg"); animation-delay: 5s; }
+.hero__slide--3 { background-image: url("../assets/img/banner-3.jpg"); animation-delay: 10s; }
 
 @keyframes heroFade {
   0%, 100% { opacity: 0; }
