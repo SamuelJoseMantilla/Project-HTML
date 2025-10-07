@@ -3,9 +3,9 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Nuestra Historia | LuxTime</title>
+  <title>Historia | LuxTime</title>
 
-  <!-- Hojas de estilo (orden recomendado) -->
+  <!-- Estilos base -->
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/layout.css">
   <link rel="stylesheet" href="css/components.css">
@@ -14,15 +14,14 @@
   <header class="site-header">
     <div class="container header__inner">
       <a href="home.html" class="logo" aria-label="LuxTime — Inicio">
-        <!-- Si luego usas imagen: <img src="assets/img/logo.svg" alt="LuxTime"> -->
         <span class="logo__text">LuxTime</span>
       </a>
 
       <nav class="site-nav" aria-label="Navegación principal">
         <ul class="nav__list">
-          <li><a href="home.html" class="nav__link is-active">Inicio</a></li>
+          <li><a href="home.html" class="nav__link">Inicio</a></li>
           <li><a href="catalogo.html" class="nav__link">Catálogo</a></li>
-          <li><a href="historia.html" class="nav__link">Historia</a></li>
+          <li><a href="historia.html" class="nav__link is-active">Historia</a></li>
           <li><a href="contacto.html" class="nav__link">Contacto</a></li>
         </ul>
       </nav>
@@ -30,11 +29,151 @@
   </header>
 
   <main id="main-content">
-    <!-- Contenido específico de cada página -->
+    <!-- Introducción -->
     <section class="section">
-      <div class="container">
-        <h1 class="page-title">Nuestra Historia</h1>
-        <p class="lead">Un recorrido desde 2000 hasta la innovación moderna en relojería de lujo.</p>
+      <div class="container text-center">
+        <h1 class="section__title">Nuestra Historia</h1>
+        <p class="section__desc">
+          Desde 1909, LuxTime ha combinado la tradición artesanal con la innovación suiza
+          para crear relojes que trascienden generaciones.
+        </p>
+      </div>
+    </section>
+
+    <!-- Línea de tiempo -->
+<section class="section timeline">
+  <div class="container">
+    <h2 class="section__title">Línea de Tiempo</h2>
+
+    <div class="timeline__wrapper">
+      <article class="timeline__item">
+        <div class="timeline__year">1970</div>
+        <div class="timeline__content">
+          <h3>Nueva era mecánica</h3>
+          <p>LuxTime refuerza su identidad con calibres de alto rendimiento frente a la “crisis del cuarzo”.</p>
+        </div>
+      </article>
+
+      <article class="timeline__item">
+        <div class="timeline__year">1982</div>
+        <div class="timeline__content">
+          <h3>Materiales innovadores</h3>
+          <p>Introducción de cajas en acero 316L y recubrimientos antirreflejo de nueva generación.</p>
+        </div>
+      </article>
+
+      <article class="timeline__item">
+        <div class="timeline__year">1995</div>
+        <div class="timeline__content">
+          <h3>Expansión en Europa</h3>
+          <p>LuxTime abre boutiques propias en Madrid, Milán y Berlín consolidando su presencia internacional.</p>
+        </div>
+      </article>
+
+      <article class="timeline__item">
+        <div class="timeline__year">2005</div>
+        <div class="timeline__content">
+          <h3>Certificaciones y precisión</h3>
+          <p>Lanzamiento de colecciones con certificación cronométrica y resistencia magnética mejorada.</p>
+        </div>
+      </article>
+
+      <article class="timeline__item">
+        <div class="timeline__year">2015</div>
+        <div class="timeline__content">
+          <h3>Artesanía + tecnología</h3>
+          <p>Movimientos automáticos con componentes ligeros; mayor reserva de marcha y acabados premium.</p>
+        </div>
+      </article>
+
+      <article class="timeline__item">
+        <div class="timeline__year">2025</div>
+        <div class="timeline__content">
+          <h3>Sostenibilidad e innovación</h3>
+          <p>Modelos con materiales reciclados, trazabilidad de cadena y líneas híbridas orientadas a eficiencia energética.</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+
+    <!-- Misión y Visión -->
+    <section class="section philosophy">
+      <div class="container grid grid-2">
+        <div>
+          <h2 class="section__title">Misión</h2>
+          <p>Diseñar relojes que inspiren confianza, precisión y distinción, preservando el legado relojero con materiales sostenibles.</p>
+        </div>
+        <div>
+          <h2 class="section__title">Visión</h2>
+          <p>Ser la marca referente en innovación elegante, integrando tecnología y artesanía para el futuro del tiempo.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Galería visual -->
+    <section class="section gallery">
+  <div class="container">
+    <h2 class="section__title">Galería Histórica</h2>
+    <p class="section__desc">
+      Una mirada a los modelos y talleres que marcaron la evolución de LuxTime desde los años 70 hasta hoy.
+    </p>
+
+    <div class="gallery__grid">
+      <!-- 1970s -->
+      <img src="assets/img/reloj-4.jpg" alt="Reloj mecánico 1970">
+      <img src="assets/img/historia.jpg" alt="Taller de relojería 1970">
+      
+      <!-- 1980s -->
+      <img src="assets/img/reloj-7.jpg" alt="Modelo de acero 1980">
+      <img src="assets/img/reloj-9.jpg" alt="Colección Vintage 1985">
+      
+      <!-- 1990s -->
+      <img src="assets/img/reloj-10.jpg" alt="Modelo Elegante 1990">
+      <img src="assets/img/reloj-11.jpg" alt="Boutique LuxTime 1995">
+      
+      <!-- 2000s -->
+      <img src="assets/img/reloj-13.jpg" alt="Modelo Moderno 2005">
+      <img src="assets/img/reloj-14.jpg" alt="Certificación cronómetro 2005">
+      
+      <!-- 2010s -->
+      <img src="assets/img/reloj-16.jpg" alt="Innovación tecnológica 2015">
+      <img src="assets/img/reloj-17.jpg" alt="Colección contemporánea 2018">
+      
+      <!-- 2020s -->
+      <img src="assets/img/reloj-18.jpg" alt="Reloj híbrido 2022">
+      <img src="assets/img/reloj-20.jpg" alt="Modelo sostenible 2025">
+    </div>
+  </div>
+</section>
+
+    <!-- Valores -->
+    <section class="section values">
+      <div class="container grid grid-3">
+        <div class="card">
+          <h3>Excelencia</h3>
+          <p>Comprometidos con los más altos estándares de calidad suiza.</p>
+        </div>
+        <div class="card">
+          <h3>Innovación</h3>
+          <p>Fusión de tradición y tecnología para redefinir la precisión.</p>
+        </div>
+        <div class="card">
+          <h3>Sostenibilidad</h3>
+          <p>Uso responsable de materiales y procesos ecoeficientes.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Futuro -->
+    <section class="section">
+      <div class="container text-center">
+        <h2 class="section__title">Mirando al Futuro</h2>
+        <p>
+          Hoy LuxTime continúa expandiéndose hacia mercados globales,
+          desarrollando relojes inteligentes sin perder su esencia clásica.
+        </p>
       </div>
     </section>
   </main>
@@ -42,9 +181,9 @@
   <footer class="site-footer">
     <div class="container footer__inner">
       <p class="footer__brand">LuxTime</p>
-      <p class="footer__copy">© <span id="year">2025</span> Todos los derechos reservados</p>
+      <p class="footer__copy">© 2025 Todos los derechos reservados</p>
       <a class="footer__mail" href="mailto:contacto@luxtime.co">contacto@luxtime.co</a>
-      <a class="footer__dev" href="#" target="_blank" rel="noopener">Desarrollado por Samuel Pallares</a>
+      <a class="footer__dev" href="#" target="_blank">Desarrollado por Samuel Pallares</a>
     </div>
   </footer>
 </body>

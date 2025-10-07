@@ -121,3 +121,121 @@
   scroll-snap-type: x mandatory;
 }
 .related .rail > * { scroll-snap-align: start; min-width: 260px; }
+
+/* === HISTORIA === */
+.timeline__wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-top: 2rem;
+  border-left: 2px solid var(--clr-brand);
+  padding-left: 1.5rem;
+}
+.timeline__item { position: relative; }
+.timeline__year {
+  font-weight: 700;
+  color: var(--clr-brand);
+  font-size: 1.25rem;
+}
+.timeline__content {
+  background: rgba(255,255,255,0.03);
+  padding: 1rem;
+  border-radius: 10px;
+  border: 1px solid rgba(255,255,255,0.08);
+  transition: transform 0.2s ease;
+}
+.timeline__item:hover .timeline__content { transform: translateX(4px); }
+
+/* Galería */
+.gallery__grid {
+  display: grid;
+  gap: .75rem;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+}
+.gallery__grid img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 12px;
+  transition: transform .3s ease;
+}
+.gallery__grid img:hover { transform: scale(1.05); }
+
+/* Filosofía */
+.philosophy p { color: var(--clr-muted); }
+
+/* Valores */
+.values .card {
+  text-align: center;
+  background: rgba(255,255,255,0.03);
+  padding: 1.5rem;
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,0.08);
+  transition: transform .2s ease, background .2s ease;
+}
+.values .card:hover {
+  transform: translateY(-3px);
+  background: rgba(255,255,255,0.06);
+}
+
+/* === CONTACTO === */
+.contact__grid { align-items: start; }
+
+/* Tarjetas base reusables (si no las tienes, quedan aquí) */
+.card {
+  background: rgba(255,255,255,.03);
+  border: 1px solid rgba(255,255,255,.08);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 1rem;
+}
+
+/* Formulario */
+.form { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 1rem; }
+.field { display: grid; gap: .35rem; }
+.field--full { grid-column: 1/-1; }
+
+.label { font-weight: 600; }
+.input {
+  width: 100%; padding: .75rem .9rem; border-radius: 10px;
+  border: 1px solid rgba(255,255,255,.15); background: #0f0f0f; color: var(--clr-text);
+  transition: border-color .2s ease, box-shadow .2s ease;
+}
+.input--area { resize: vertical; min-height: 140px; }
+
+/* Estados de foco */
+.input:focus {
+  outline: none;
+  border-color: var(--clr-brand);
+  box-shadow: 0 0 0 3px rgba(202,168,106,.15);
+}
+
+/* Validación visual por CSS puro */
+.field__msg {
+  font-size: .85em; color: #ffb3b3;
+  opacity: 0; transform: translateY(-2px);
+  transition: opacity .2s ease, transform .2s ease;
+}
+
+/* Reglas: invalid → borde rojo y mensaje visible / valid → borde ok */
+.input:required:invalid { border-color: #ff6b6b; }
+.input:required:invalid ~ .field__msg { opacity: 1; transform: translateY(0); }
+
+.input:required:valid { border-color: #3ddc84; }
+
+/* Acciones */
+.form__actions {
+  grid-column: 1/-1;
+  display: flex; gap: .75rem; justify-content: flex-end; margin-top: .25rem;
+}
+
+/* Info contacto */
+.contact__info { display: grid; gap: .75rem; }
+.contact__list, .social { display: grid; gap: .35rem; }
+.social a { text-decoration: underline; text-underline-offset: 2px; }
+
+/* Responsive: formulario a 1 columna en móvil */
+@media (max-width: 640px){
+  .form { grid-template-columns: 1fr; }
+}

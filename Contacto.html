@@ -30,14 +30,76 @@
   </header>
 
   <main id="main-content">
-    <!-- Contenido específico de cada página -->
-    <section class="section">
-      <div class="container">
-        <h1 class="page-title">Contacto</h1>
-        <p class="lead">Estamos aquí para ayudarte. Envíanos un mensaje o visítanos en nuestras sedes.</p>
+  <section class="section">
+    <div class="container">
+      <header class="section__head text-center">
+        <h1 class="section__title">Contacto</h1>
+        <p class="section__desc">Escríbenos y te responderemos a la brevedad.</p>
+      </header>
+
+      <div class="grid grid-2 contact__grid">
+        <!-- Formulario -->
+        <form class="form card contact__form" novalidate>
+          <!-- Nombre -->
+          <div class="field">
+            <label for="nombre" class="label">Nombre completo</label>
+            <input id="nombre" name="nombre" class="input" type="text" placeholder="Ej. Samuel Pallarés" required minlength="3" />
+            <small class="field__msg">Ingresa al menos 3 caracteres.</small>
+          </div>
+
+          <!-- Email -->
+          <div class="field">
+            <label for="email" class="label">Correo electrónico</label>
+            <input id="email" name="email" class="input" type="email" placeholder="tu@correo.com" required />
+            <small class="field__msg">Formato: nombre@dominio.com</small>
+          </div>
+
+          <!-- Teléfono -->
+          <div class="field">
+            <label for="telefono" class="label">Teléfono</label>
+            <input
+              id="telefono" name="telefono" class="input" type="tel" placeholder="(+57) 300 000 0000"
+              required
+              pattern="^[+() 0-9-]{7,20}$"
+            />
+            <small class="field__msg">Usa solo números y símbolos (+ - ( ) ).</small>
+          </div>
+
+          <!-- Mensaje -->
+          <div class="field field--full">
+            <label for="mensaje" class="label">Mensaje</label>
+            <textarea id="mensaje" name="mensaje" class="input input--area" rows="6" placeholder="Cuéntanos en qué te ayudamos" required minlength="10"></textarea>
+            <small class="field__msg">Mínimo 10 caracteres.</small>
+          </div>
+
+          <!-- Acciones -->
+          <div class="form__actions">
+            <button type="submit" class="btn btn--primary">Enviar (simulado)</button>
+            <button type="reset" class="btn btn--outline">Limpiar</button>
+          </div>
+        </form>
+
+        <!-- Info adicional -->
+        <aside class="card contact__info">
+          <h2 class="section__title">Información</h2>
+          <ul class="contact__list">
+            <li><strong>Correo:</strong> <a href="mailto:contacto@luxtime.co">contacto@luxtime.co</a></li>
+            <li><strong>Teléfono:</strong> <a href="tel:+573000000000">+57 300 000 0000</a></li>
+            <li><strong>Horario:</strong> Lun–Vie 9:00–18:00</li>
+          </ul>
+
+          <h3>Redes</h3>
+          <ul class="social">
+            <li><a href="#" aria-label="Instagram LuxTime">Instagram</a></li>
+            <li><a href="#" aria-label="Facebook LuxTime">Facebook</a></li>
+            <li><a href="#" aria-label="YouTube LuxTime">YouTube</a></li>
+          </ul>
+        </aside>
       </div>
-    </section>
-  </main>
+    </div>
+  </section>
+</main>
+
 
   <footer class="site-footer">
     <div class="container footer__inner">
