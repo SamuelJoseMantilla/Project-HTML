@@ -31,6 +31,144 @@
 
   <main id="main-content">
     <!-- Contenido específico de cada página -->
+     <section class="section product-page">
+  <div class="container grid grid-2">
+
+    <!-- Galería -->
+    <aside class="product-gallery">
+      <figure class="product-hero">
+        <img src="assets/img/reloj-1.jpg" alt="Reloj LuxTime Modelo Clásico, vista frontal" class="zoomable">
+      </figure>
+
+      <div class="thumbs" role="list">
+        <button class="thumb" role="listitem" aria-label="Vista 1">
+          <img src="assets/img/reloj-1.jpg" alt="">
+        </button>
+        <button class="thumb" role="listitem" aria-label="Vista 2">
+          <img src="assets/img/reloj-2.jpg" alt="">
+        </button>
+        <button class="thumb" role="listitem" aria-label="Vista 3">
+          <img src="assets/img/reloj-3.jpg" alt="">
+        </button>
+        <button class="thumb" role="listitem" aria-label="Vista 4">
+          <img src="assets/img/reloj-4.jpg" alt="">
+        </button>
+      </div>
+    </aside>
+
+    <!-- Información -->
+    <article class="product-info">
+      <header class="product-head">
+        <h1 class="page-title">Modelo Clásico LuxTime</h1>
+        <div class="product-meta">
+          <span class="product-price">$2,800</span>
+          <span class="rating" aria-label="4.5 de 5">★★★★★</span>
+          <span class="badge badge--stock">En stock</span>
+        </div>
+      </header>
+
+      <section class="product-brief">
+        <p>Un reloj clásico con precisión excepcional y acabados premium.</p>
+      </section>
+
+      <!-- Especificaciones técnicas -->
+      <section class="product-specs">
+        <h2 class="visually-hidden">Especificaciones técnicas</h2>
+        <dl class="specs">
+          <div><dt>Material</dt><dd>Acero inoxidable 316L</dd></div>
+          <div><dt>Tamaño</dt><dd>41 mm</dd></div>
+          <div><dt>Peso</dt><dd>120 g</dd></div>
+          <div><dt>Resistencia al agua</dt><dd>10 ATM</dd></div>
+          <div><dt>Cristal</dt><dd>Zafiro antirreflejo</dd></div>
+        </dl>
+      </section>
+
+      <!-- Personalización (simulada) -->
+      <section class="product-custom">
+        <h2 class="section__title">Personaliza tu reloj</h2>
+
+        <div class="form">
+          <!-- Grabado -->
+          <label for="grabado" class="label">Grabado</label>
+          <select id="grabado" class="input">
+            <option value="">Sin grabado</option>
+            <option value="iniciales">Iniciales (3 caracteres)</option>
+            <option value="fecha">Fecha Especial</option>
+          </select>
+
+          <!-- CorreA (radios) -->
+          <fieldset class="strap-group">
+            <legend class="label">Correa</legend>
+            <label class="swatch">
+              <input type="radio" name="strap" checked>
+              <span class="swatch__chip" style="--sw:#2b2b2b" title="Cuero negro"></span>
+              <span class="swatch__name">Cuero negro</span>
+            </label>
+            <label class="swatch">
+              <input type="radio" name="strap">
+              <span class="swatch__chip" style="--sw:#6b3d22" title="Cuero marrón"></span>
+              <span class="swatch__name">Cuero marrón</span>
+            </label>
+            <label class="swatch">
+              <input type="radio" name="strap">
+              <span class="swatch__chip" style="--sw:#c0c0c0" title="Acero"></span>
+              <span class="swatch__name">Acero</span>
+            </label>
+          </fieldset>
+
+          <div class="product-cta">
+            <a href="catalogo.html" class="btn btn--outline">Volver al catálogo</a>
+            <a href="#" class="btn btn--primary">Añadir (simulado)</a>
+          </div>
+        </div>
+      </section>
+    </article>
+  </div>
+</section>
+
+<!-- Relacionados (carrusel simulado) -->
+<section class="section related">
+  <div class="container">
+    <h2 class="section__title">Relacionados</h2>
+    <div class="rail" role="list">
+      <article class="card product" role="listitem">
+        <div class="product__media">
+          <img src="assets/img/reloj-2.jpg" alt="Modelo Dorado">
+          <span class="badge badge--stock">En stock</span>
+        </div>
+        <div class="card__body">
+          <h3 class="product__name">Modelo Dorado</h3>
+          <div class="product__meta">
+            <span class="product__price">$3,200</span>
+            <span class="rating" aria-label="5 de 5">★★★★★</span>
+          </div>
+          <div class="product__actions">
+            <a href="producto.html" class="btn btn--outline">Ver detalles</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- duplica 3–4 más con otras imágenes -->
+      <article class="card product" role="listitem">
+        <div class="product__media">
+          <img src="assets/img/reloj-3.jpg" alt="Modelo Minimal">
+          <span class="badge badge--stock">En stock</span>
+        </div>
+        <div class="card__body">
+          <h3 class="product__name">Modelo Minimal</h3>
+          <div class="product__meta">
+            <span class="product__price">$2,600</span>
+            <span class="rating" aria-label="4 de 5">★★★★☆</span>
+          </div>
+          <div class="product__actions">
+            <a href="producto.html" class="btn btn--outline">Ver detalles</a>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
     <section class="section">
       <div class="container">
         <h1 class="page-title">Detalle del Producto</h1>
@@ -44,7 +182,7 @@
       <p class="footer__brand">LuxTime</p>
       <p class="footer__copy">© <span id="year">2025</span> Todos los derechos reservados</p>
       <a class="footer__mail" href="mailto:contacto@luxtime.co">contacto@luxtime.co</a>
-      <a class="footer__dev" href="#" target="_blank" rel="noopener">Desarrollado por [Tu Nombre]</a>
+      <a class="footer__dev" href="#" target="_blank" rel="noopener">Desarrollado por Samuel Pallares</a>
     </div>
   </footer>
 </body>
