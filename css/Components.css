@@ -1,259 +1,217 @@
-.hero {
-  position: relative;
-  min-height: 70vh;
-  display: grid;
-  place-items: center;
-  overflow: hidden;
-}
+/* ================================
+   COMPONENTS.CSS - LuxTime
+   ================================ */
 
-.hero__slides {
-  position: absolute;
-  inset: 0;
-}
-
-.hero__slide {
-  position: absolute;
-  inset: 0;
-  background-size: cover;
-  background-position: center;
-  opacity: 0;
-  animation: heroFade 15s infinite;
-}
-
-.hero__slide--1 { background-image: url("../assets/img/banner-1.png"); animation-delay: 0s; }
-.hero__slide--2 { background-image: url("../assets/img/banner-2.jpg"); animation-delay: 5s; }
-.hero__slide--3 { background-image: url("../assets/img/banner-3.jpg"); animation-delay: 10s; }
-
-@keyframes heroFade {
-  0%, 100% { opacity: 0; }
-  5%, 30% { opacity: 1; }
-  35%, 95% { opacity: 0; }
-}
-
-.hero::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(180deg, rgba(0,0,0,.3), rgba(0,0,0,.6));
-}
-
-.hero__content {
-  position: relative;
-  z-index: 2;
+/* -------------------------------
+   BOTONES
+--------------------------------*/
+.btn {
+  display: inline-block;
+  padding: 0.6rem 1.2rem;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  text-decoration: none;
   text-align: center;
-  color: var(--clr-text);
-  display: grid;
-  gap: 1rem;
-  padding: 2rem;
 }
 
-.hero__title { font-size: var(--fs-h1); }
-.hero__subtitle { color: var(--clr-muted); }
+.btn--outline {
+  border: 2px solid var(--color-primary, #000);
+  color: var(--color-primary, #000);
+  background: transparent;
+}
 
-/* === PRODUCT PAGE === */
-.product-page .product-gallery { display: grid; gap: 1rem; }
+.btn--outline:hover {
+  background: var(--color-primary, #000);
+  color: #fff;
+}
 
-/* Imagen grande con zoom */
-.product-hero {
-  background: #0f0f0f;
-  border: 1px solid rgba(255,255,255,.08);
-  border-radius: var(--radius);
-  overflow: hidden;
-}
-.product-hero .zoomable {
-  width: 100%; height: auto; display: block; 
-  transform-origin: center center;
-  transition: transform .6s ease;
-}
-.product-hero:hover .zoomable { transform: scale(1.08); }
-
-/* Miniaturas horizontales (scroll-snap) */
-.thumbs {
-  display: grid; grid-auto-flow: column; gap: .75rem;
-  overflow-x: auto; padding-bottom: .25rem;
-  scroll-snap-type: x mandatory;
-}
-.thumb { 
-  scroll-snap-align: start; 
-  background: transparent; border: none; padding: 0; cursor: pointer;
-}
-.thumb img {
-  width: 92px; height: 68px; object-fit: cover;
-  border-radius: 10px; border: 1px solid rgba(255,255,255,.12);
-  opacity: .85; transition: opacity .2s ease, transform .2s ease;
-}
-.thumb:hover img, .thumb:focus img { opacity: 1; transform: translateY(-1px); }
-
-/* Info */
-.product-head { display: grid; gap: .5rem; }
-.product-meta { display: flex; align-items: center; gap: .75rem; flex-wrap: wrap; }
-.product-price { font-size: 1.25rem; font-weight: 700; }
-.product-brief { color: var(--clr-muted); }
-
-/* Specs */
-.specs { display: grid; gap: .5rem; margin-top: 1rem; }
-.specs div { display: grid; grid-template-columns: 160px 1fr; gap: .75rem; }
-.specs dt { color: var(--clr-muted); }
-.specs dd { margin: 0; }
-
-/* Personalización (simulada) */
-.label { font-weight: 600; }
-.strap-group {
-  display: grid; grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: .75rem; border: none; padding: 0; margin: .5rem 0 0;
-}
-.swatch { display: grid; grid-template-columns: auto 1fr; align-items: center; gap: .5rem; }
-.swatch input { appearance: none; width: 1rem; height: 1rem; border-radius: 50%; border: 2px solid var(--clr-muted); }
-.swatch input:checked { border-color: var(--clr-brand); }
-.swatch__chip {
-  display: inline-block; width: 28px; height: 28px; border-radius: 999px;
-  background: var(--sw, #444); border: 2px solid rgba(255,255,255,.18);
-}
-.swatch__name { color: var(--clr-muted); }
-
-/* CTAs */
-.product-cta { display: flex; gap: .75rem; margin-top: .5rem; }
-
-/* Relacionados: carrusel (UI) */
-.related .rail {
-  display: grid; grid-auto-flow: column; gap: 1rem;
-  overflow-x: auto; padding: .5rem 0 1rem;
-  scroll-snap-type: x mandatory;
-}
-.related .rail > * { scroll-snap-align: start; min-width: 260px; }
-
-/* === HISTORIA === */
-.timeline__wrapper {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-  margin-top: 2rem;
-  border-left: 2px solid var(--clr-brand);
-  padding-left: 1.5rem;
-}
-.timeline__item { position: relative; }
-.timeline__year {
-  font-weight: 700;
-  color: var(--clr-brand);
-  font-size: 1.25rem;
-}
-.timeline__content {
-  background: rgba(255,255,255,0.03);
-  padding: 1rem;
+/* -------------------------------
+   TARJETAS DE PRODUCTO
+--------------------------------*/
+.card.product {
+  background: #fff;
   border-radius: 10px;
-  border: 1px solid rgba(255,255,255,0.08);
-  transition: transform 0.2s ease;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  position: relative;
 }
-.timeline__item:hover .timeline__content { transform: translateX(4px); }
 
-/* Galería */
-.gallery__grid {
-  display: grid;
-  gap: .75rem;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+.card.product:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.12);
 }
-.gallery__grid img {
+
+.product__media {
+  position: relative;
   width: 100%;
-  height: 200px;
-  object-fit: cover;
-  border-radius: 12px;
-  transition: transform .3s ease;
-}
-.gallery__grid img:hover { transform: scale(1.05); }
-
-/* Filosofía */
-.philosophy p { color: var(--clr-muted); }
-
-/* Valores */
-.values .card {
-  text-align: center;
-  background: rgba(255,255,255,0.03);
-  padding: 1.5rem;
-  border-radius: 12px;
-  border: 1px solid rgba(255,255,255,0.08);
-  transition: transform .2s ease, background .2s ease;
-}
-.values .card:hover {
-  transform: translateY(-3px);
-  background: rgba(255,255,255,0.06);
-}
-
-/* === CONTACTO === */
-.contact__grid { align-items: start; }
-
-/* Tarjetas base reusables (si no las tienes, quedan aquí) */
-.card {
-  background: rgba(255,255,255,.03);
-  border: 1px solid rgba(255,255,255,.08);
-  border-radius: var(--radius);
-  box-shadow: var(--shadow);
-  padding: 1rem;
-}
-
-/* Formulario */
-.form { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 1rem; }
-.field { display: grid; gap: .35rem; }
-.field--full { grid-column: 1/-1; }
-
-.label { font-weight: 600; }
-.input {
-  width: 100%; padding: .75rem .9rem; border-radius: 10px;
-  border: 1px solid rgba(255,255,255,.15); background: #0f0f0f; color: var(--clr-text);
-  transition: border-color .2s ease, box-shadow .2s ease;
-}
-.input--area { resize: vertical; min-height: 140px; }
-
-/* Estados de foco */
-.input:focus {
-  outline: none;
-  border-color: var(--clr-brand);
-  box-shadow: 0 0 0 3px rgba(202,168,106,.15);
-}
-
-/* Validación visual por CSS puro */
-.field__msg {
-  font-size: .85em; color: #ffb3b3;
-  opacity: 0; transform: translateY(-2px);
-  transition: opacity .2s ease, transform .2s ease;
-}
-
-/* Reglas: invalid → borde rojo y mensaje visible / valid → borde ok */
-.input:required:invalid { border-color: #ff6b6b; }
-.input:required:invalid ~ .field__msg { opacity: 1; transform: translateY(0); }
-
-.input:required:valid { border-color: #3ddc84; }
-
-/* Acciones */
-.form__actions {
-  grid-column: 1/-1;
-  display: flex; gap: .75rem; justify-content: flex-end; margin-top: .25rem;
-}
-
-/* Info contacto */
-.contact__info { display: grid; gap: .75rem; }
-.contact__list, .social { display: grid; gap: .35rem; }
-.social a { text-decoration: underline; text-underline-offset: 2px; }
-
-/* Responsive: formulario a 1 columna en móvil */
-@media (max-width: 640px){
-  .form { grid-template-columns: 1fr; }
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
 }
 
 .product__media img {
   width: 100%;
-  height: 320px;          /* o el alto que quieras */
-  object-fit: cover;      /* recorta sin deformar */
-  object-position: center;
-  border-radius: 8px;
-}
-
-.product-view { display: none; }          /* Oculta todos por defecto */
-.product-view:target { display: block; }  /* Muestra solo el seleccionado */
-
-/* Solo si NO hay hash (#) en la URL, muestra el primero */
-:root:not(:has(:target)) .product-views .product-view:first-of-type {
+  height: 100%;
+  object-fit: cover;
   display: block;
 }
 
-.product-view:target .product-hero .zoomable{transform:scale(1.02)}
+.card__body {
+  padding: 1rem;
+}
+
+.product__name {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 0.2rem 0 0.6rem;
+}
+
+.product__meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.8rem;
+}
+
+.product__price {
+  font-weight: 600;
+}
+
+.rating {
+  color: #f2b01e;
+}
+
+/* -------------------------------
+   INSIGNIAS
+--------------------------------*/
+.badge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  padding: 0.3rem 0.7rem;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #fff;
+  background: #0a0a0a;
+  z-index: 3;
+  pointer-events: none; /* evita bloquear clics */
+}
+
+.badge--stock {
+  background: #00b67a;
+}
+
+.badge--out {
+  background: #b60000;
+}
+
+/* -------------------------------
+   DETALLE DE PRODUCTO (:target)
+--------------------------------*/
+html {
+  scroll-behavior: smooth;
+}
+
+.product-view {
+  display: none;
+  scroll-margin-top: 96px; /* evita que el header tape el producto */
+  animation: fadeIn 0.5s ease;
+}
+
+.product-view:target {
+  display: block;
+}
+
+#default {
+  display: block;
+  text-align: center;
+  padding: 3rem 1rem;
+}
+
+:target ~ #default {
+  display: none;
+}
+
+/* animación suave */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* -------------------------------
+   TARJETAS CLICABLES (FIX MÓVIL)
+--------------------------------*/
+.card.product {
+  position: relative;
+}
+
+.stretched-link {
+  position: absolute;
+  inset: 0; /* cubre toda la tarjeta */
+  z-index: 5;
+  display: block;
+  text-decoration: none;
+  background: transparent;
+}
+
+/* el botón visual se muestra pero deja pasar el toque */
+.card .btn.btn--outline {
+  position: relative;
+  z-index: 6;
+  pointer-events: none;
+}
+
+/* -------------------------------
+   TABLAS, GRILLAS, OTROS
+--------------------------------*/
+.grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.grid-2 {
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.grid-4 {
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+/* -------------------------------
+   FOOTER / GENERAL
+--------------------------------*/
+.footer__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+.footer__copy {
+  margin: 0.5rem 0;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.footer__mail,
+.footer__dev {
+  color: #000;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.footer__mail:hover,
+.footer__dev:hover {
+  text-decoration: underline;
+}
