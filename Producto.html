@@ -5,22 +5,28 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Detalle del Producto | LuxTime</title>
 
-  <!-- Hojas de estilo (orden recomendado) -->
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/layout.css">
   <link rel="stylesheet" href="css/components.css">
+
+  <style>
+    html { scroll-behavior: smooth; }
+    .product-view { display: none; scroll-margin-top: 90px; }
+    .product-view:target { display: block; }
+    #default { display: block; }
+    :target ~ #default { display: none; }
+  </style>
 </head>
 <body>
   <header class="site-header">
     <div class="container header__inner">
       <a href="home.html" class="logo" aria-label="LuxTime — Inicio">
-        <!-- Si luego usas imagen: <img src="assets/img/logo.svg" alt="LuxTime"> -->
         <span class="logo__text">LuxTime</span>
       </a>
 
       <nav class="site-nav" aria-label="Navegación principal">
         <ul class="nav__list">
-          <li><a href="home.html" class="nav__link is-active">Inicio</a></li>
+          <li><a href="home.html" class="nav__link">Inicio</a></li>
           <li><a href="catalogo.html" class="nav__link">Catálogo</a></li>
           <li><a href="historia.html" class="nav__link">Historia</a></li>
           <li><a href="contacto.html" class="nav__link">Contacto</a></li>
@@ -29,797 +35,306 @@
     </div>
   </header>
 
-  <main id="main-content">
-    <!-- Contenido específico de cada página -->
-     <section class="section product-page">
-  <div class="container grid grid-2">
+  <main id="main-content" class="section">
+    <div class="container">
+      <!-- 🔸 Bloques de producto del 1 al 20 -->
+      <!-- =================================== -->
 
-<section class="section product-views">
-  <div class="container">
-
-    <!-- ===== Producto 1 ===== -->
-    <article id="prod-01" class="product-view">
-      <div class="grid grid-2">
-        <aside class="product-gallery">
-          <figure class="product-hero">
-            <img src="assets/img/reloj-1.jpg" alt="Modelo Clásico cuero negro" class="zoomable">
-          </figure>
-        </aside>
-        <article class="product-info">
-          <header class="product-head">
+      <article id="prod-1" class="product-view">
+        <div class="grid grid-2">
+          <aside class="product-gallery">
+            <figure><img src="assets/img/reloj-1.jpg" alt="Modelo Clásico"></figure>
+          </aside>
+          <div class="product-info">
             <h1 class="page-title">Modelo Clásico • Cuero negro</h1>
-            <div class="product-meta">
-              <span class="product-price">$2,800</span>
-              <span class="rating">★★★★★</span>
-              <span class="badge badge--stock">En stock</span>
-            </div>
-          </header>
-          <section class="product-specs">
-            <dl class="specs">
-              <div><dt>Material</dt><dd>Acero 316L</dd></div>
-              <div><dt>Tamaño</dt><dd>41 mm</dd></div>
-              <div><dt>Peso</dt><dd>120 g</dd></div>
-              <div><dt>Cristal</dt><dd>Zafiro AR</dd></div>
-            </dl>
-          </section>
-          <div class="product-cta">
+            <p>Reloj elegante con correa de cuero negro, cristal de zafiro y movimiento automático de alta precisión.</p>
+            <p><strong>Precio:</strong> $2,800</p>
             <a href="catalogo.html" class="btn btn--outline">Volver al catálogo</a>
-          </div>
-        </article>
-      </div>
-    </article>
-
-    <!-- ===== Producto 2 ===== -->
-    <article id="prod-02" class="product-view">
-      <div class="grid grid-2">
-        <aside class="product-gallery">
-          <figure class="product-hero">
-            <img src="assets/img/reloj-2.jpg" alt="Dorado elegante con malla metálica" class="zoomable">
-          </figure>
-        </aside>
-        <article class="product-info">
-          <header class="product-head">
-            <h1 class="page-title">Modelo Dorado • Malla metálica</h1>
-            <div class="product-meta">
-              <span class="product-price">$3,200</span>
-              <span class="rating">★★★★★</span>
-              <span class="badge badge--stock">En stock</span>
-            </div>
-          </header>
-          <section class="product-specs">
-            <dl class="specs">
-              <div><dt>Material</dt><dd>Acero chapado oro</dd></div>
-              <div><dt>Tamaño</dt><dd>40 mm</dd></div>
-              <div><dt>Resistencia</dt><dd>5 ATM</dd></div>
-              <div><dt>Cristal</dt><dd>Zafiro</dd></div>
-            </dl>
-          </section>
-          <div class="product-cta">
-            <a href="catalogo.html" class="btn btn--outline">Volver al catálogo</a>
-          </div>
-        </article>
-      </div>
-    </article>
-
-    <!-- ===== Producto 3 ===== -->
-    <article id="prod-03" class="product-view">
-      <div class="grid grid-2">
-        <aside class="product-gallery">
-          <figure class="product-hero">
-            <img src="assets/img/reloj-3.jpg" alt="Deportivo acero correa caucho" class="zoomable">
-          </figure>
-        </aside>
-        <article class="product-info">
-          <header class="product-head">
-            <h1 class="page-title">Modelo Deportivo • Acero</h1>
-            <div class="product-meta">
-              <span class="product-price">$2,500</span>
-              <span class="rating">★★★★☆</span>
-              <span class="badge badge--stock">En stock</span>
-            </div>
-          </header>
-          <section class="product-specs">
-            <dl class="specs">
-              <div><dt>Material</dt><dd>Acero 316L</dd></div>
-              <div><dt>Tamaño</dt><dd>43 mm</dd></div>
-              <div><dt>Resistencia</dt><dd>10 ATM</dd></div>
-              <div><dt>Movimiento</dt><dd>Automático</dd></div>
-            </dl>
-          </section>
-          <div class="product-cta">
-            <a href="catalogo.html" class="btn btn--outline">Volver al catálogo</a>
-          </div>
-        </article>
-      </div>
-    </article>
-
-    <!-- ===== Producto 4 ===== -->
-    <article id="prod-04" class="product-view">
-      <div class="grid grid-2">
-        <aside class="product-gallery">
-          <figure class="product-hero">
-            <img src="assets/img/reloj-4.jpg" alt="Vintage cuero marrón" class="zoomable">
-          </figure>
-        </aside>
-        <article class="product-info">
-          <header class="product-head">
-            <h1 class="page-title">Modelo Vintage • Cuero marrón</h1>
-            <div class="product-meta">
-              <span class="product-price">$3,000</span>
-              <span class="rating">★★★★★</span>
-              <span class="badge badge--out">Agotado</span>
-            </div>
-          </header>
-          <section class="product-specs">
-            <dl class="specs">
-              <div><dt>Material</dt><dd>Latón/envejecido</dd></div>
-              <div><dt>Tamaño</dt><dd>39 mm</dd></div>
-              <div><dt>Movimiento</dt><dd>Manual</dd></div>
-              <div><dt>Cristal</dt><dd>Mineral</dd></div>
-            </dl>
-          </section>
-          <div class="product-cta">
-            <a href="catalogo.html" class="btn btn--outline">Volver al catálogo</a>
-          </div>
-        </article>
-      </div>
-    </article>
-
-    <!-- ===== Producto 5 ===== -->
-    <article id="prod-05" class="product-view">
-      <div class="grid grid-2">
-        <aside class="product-gallery">
-          <figure class="product-hero">
-            <img src="assets/img/reloj-5.jpg" alt="Elegante acero pulido esfera blanca" class="zoomable">
-          </figure>
-        </aside>
-        <article class="product-info">
-          <header class="product-head">
-            <h1 class="page-title">Modelo Elegante • Esfera blanca</h1>
-            <div class="product-meta">
-              <span class="product-price">$4,000</span>
-              <span class="rating">★★★★★</span>
-              <span class="badge badge--stock">En stock</span>
-            </div>
-          </header>
-          <section class="product-specs">
-            <dl class="specs">
-              <div><dt>Material</dt><dd>Acero 316L</dd></div>
-              <div><dt>Tamaño</dt><dd>40 mm</dd></div>
-              <div><dt>Cristal</dt><dd>Zafiro</dd></div>
-              <div><dt>Movimiento</dt><dd>Automático</dd></div>
-            </dl>
-          </section>
-          <div class="product-cta">
-            <a href="catalogo.html" class="btn btn--outline">Volver al catálogo</a>
-          </div>
-        </article>
-      </div>
-    </article>
-
-    <!-- ===== Producto 6 ===== -->
-    <article id="prod-06" class="product-view">
-      <div class="grid grid-2">
-        <aside class="product-gallery">
-          <figure class="product-hero">
-            <img src="assets/img/reloj-6.jpg" alt="Moderno correa cuero negro" class="zoomable">
-          </figure>
-        </aside>
-        <article class="product-info">
-          <header class="product-head">
-            <h1 class="page-title">Modelo Moderno • Cuero negro</h1>
-            <div class="product-meta">
-              <span class="product-price">$3,500</span>
-              <span class="rating">★★★★☆</span>
-              <span class="badge badge--stock">En stock</span>
-            </div>
-          </header>
-          <section class="product-specs">
-            <dl class="specs">
-              <div><dt>Material</dt><dd>Acero 316L</dd></div>
-              <div><dt>Tamaño</dt><dd>42 mm</dd></div>
-              <div><dt>Resistencia</dt><dd>5 ATM</dd></div>
-              <div><dt>Cristal</dt><dd>Zafiro</dd></div>
-            </dl>
-          </section>
-          <div class="product-cta">
-            <a href="catalogo.html" class="btn btn--outline">Volver al catálogo</a>
-          </div>
-        </article>
-      </div>
-    </article>
-
-    <!-- ===== Producto 7 ===== -->
-    <article id="prod-07" class="product-view">
-      <div class="grid grid-2">
-        <aside class="product-gallery">
-          <figure class="product-hero">
-            <img src="assets/img/reloj-7.jpg" alt="Clásico 2 esfera negra" class="zoomable">
-          </figure>
-        </aside>
-        <article class="product-info">
-          <header class="product-head">
-            <h1 class="page-title">Modelo Clásico 2 • Esfera negra</h1>
-            <div class="product-meta">
-              <span class="product-price">$2,900</span>
-              <span class="rating">★★★★☆</span>
-              <span class="badge badge--stock">En stock</span>
-            </div>
-          </header>
-          <section class="product-specs">
-            <dl class="specs">
-              <div><dt>Material</dt><dd>Acero 316L</dd></div>
-              <div><dt>Tamaño</dt><dd>40 mm</dd></div>
-              <div><dt>Movimiento</dt><dd>Automático</dd></div>
-              <div><dt>Cristal</dt><dd>Mineral</dd></div>
-            </dl>
-          </section>
-          <div class="product-cta">
-            <a href="catalogo.html" class="btn btn--outline">Volver al catálogo</a>
-          </div>
-        </article>
-      </div>
-    </article>
-
-    <!-- ===== Producto 8 ===== -->
-    <article id="prod-08" class="product-view">
-      <div class="grid grid-2">
-        <aside class="product-gallery">
-          <figure class="product-hero">
-            <img src="assets/img/reloj-8.jpg" alt="Deportivo 2 acero malla" class="zoomable">
-          </figure>
-        </aside>
-        <article class="product-info">
-          <header class="product-head">
-            <h1 class="page-title">Modelo Deportivo 2 • Malla acero</h1>
-            <div class="product-meta">
-              <span class="product-price">$3,300</span>
-              <span class="rating">★★★★★</span>
-              <span class="badge badge--stock">En stock</span>
-            </div>
-          </header>
-          <section class="product-specs">
-            <dl class="specs">
-              <div><dt>Material</dt><dd>Acero 316L</dd></div>
-              <div><dt>Tamaño</dt><dd>42 mm</dd></div>
-              <div><dt>Resistencia</dt><dd>10 ATM</dd></div>
-              <div><dt>Cristal</dt><dd>Zafiro</dd></div>
-            </dl>
-          </section>
-          <div class="product-cta">
-            <a href="catalogo.html" class="btn btn--outline">Volver al catálogo</a>
-          </div>
-        </article>
-      </div>
-    </article>
-
-    <!-- ===== Producto 9 ===== -->
-    <article id="prod-09" class="product-view">
-      <div class="grid grid-2">
-        <aside class="product-gallery">
-          <figure class="product-hero">
-            <img src="assets/img/reloj-9.jpg" alt="Vintage 2 dorado" class="zoomable">
-          </figure>
-        </aside>
-        <article class="product-info">
-          <header class="product-head">
-            <h1 class="page-title">Modelo Vintage 2 • Dorado</h1>
-            <div class="product-meta">
-              <span class="product-price">$3,800</span>
-              <span class="rating">★★★★★</span>
-              <span class="badge badge--out">Agotado</span>
-            </div>
-          </header>
-          <section class="product-specs">
-            <dl class="specs">
-              <div><dt>Material</dt><dd>Latón/baño oro</dd></div>
-              <div><dt>Tamaño</dt><dd>39 mm</dd></div>
-              <div><dt>Movimiento</dt><dd>Manual</dd></div>
-              <div><dt>Cristal</dt><dd>Mineral</dd></div>
-            </dl>
-          </section>
-          <div class="product-cta">
-            <a href="catalogo.html" class="btn btn--outline">Volver al catálogo</a>
-          </div>
-        </article>
-      </div>
-    </article>
-
-    <!-- ===== Producto 10 ===== -->
-    <article id="prod-10" class="product-view">
-      <div class="grid grid-2">
-        <aside class="product-gallery">
-          <figure class="product-hero">
-            <img src="assets/img/reloj-10.jpg" alt="Elegante 2 acero pulido" class="zoomable">
-          </figure>
-        </aside>
-        <article class="product-info">
-          <header class="product-head">
-            <h1 class="page-title">Modelo Elegante 2 • Acero</h1>
-            <div class="product-meta">
-              <span class="product-price">$4,200</span>
-              <span class="rating">★★★★★</span>
-              <span class="badge badge--stock">En stock</span>
-            </div>
-          </header>
-          <section class="product-specs">
-            <dl class="specs">
-              <div><dt>Material</dt><dd>Acero 316L</dd></div>
-              <div><dt>Tamaño</dt><dd>41 mm</dd></div>
-              <div><dt>Cristal</dt><dd>Zafiro AR</dd></div>
-              <div><dt>Movimiento</dt><dd>Automático</dd></div>
-            </dl>
-          </section>
-          <div class="product-cta">
-            <a href="catalogo.html" class="btn btn--outline">Volver al catálogo</a>
-          </div>
-        </article>
-      </div>
-    </article>
-
-    <!-- ===== Producto 11 ===== -->
-    <article id="prod-11" class="product-view">
-      <div class="grid grid-2">
-        <aside class="product-gallery">
-          <figure class="product-hero">
-            <img src="assets/img/reloj-11.jpg" alt="Moderno 2 esfera blanca" class="zoomable">
-          </figure>
-        </aside>
-        <article class="product-info">
-          <header class="product-head">
-            <h1 class="page-title">Modelo Moderno 2 • Esfera blanca</h1>
-            <div class="product-meta">
-              <span class="product-price">$3,700</span>
-              <span class="rating">★★★★☆</span>
-              <span class="badge badge--stock">En stock</span>
-            </div>
-          </header>
-          <section class="product-specs">
-            <dl class="specs">
-              <div><dt>Material</dt><dd>Acero 316L</dd></div>
-              <div><dt>Tamaño</dt><dd>42 mm</dd></div>
-              <div><dt>Resistencia</dt><dd>5 ATM</dd></div>
-              <div><dt>Cristal</dt><dd>Mineral</dd></div>
-            </dl>
-          </section>
-          <div class="product-cta">
-            <a href="catalogo.html" class="btn btn--outline">Volver al catálogo</a>
-          </div>
-        </article>
-      </div>
-    </article>
-
-    <!-- ===== Producto 12 ===== -->
-    <article id="prod-12" class="product-view">
-      <div class="grid grid-2">
-        <aside class="product-gallery">
-          <figure class="product-hero">
-            <img src="assets/img/reloj-12.jpg" alt="Clásico 3 acero pulido" class="zoomable">
-          </figure>
-        </aside>
-        <article class="product-info">
-          <header class="product-head">
-            <h1 class="page-title">Modelo Clásico 3 • Acero pulido</h1>
-            <div class="product-meta">
-              <span class="product-price">$3,000</span>
-              <span class="rating">★★★★★</span>
-              <span class="badge badge--stock">En stock</span>
-            </div>
-          </header>
-          <section class="product-specs">
-            <dl class="specs">
-              <div><dt>Material</dt><dd>Acero 316L</dd></div>
-              <div><dt>Tamaño</dt><dd>40 mm</dd></div>
-              <div><dt>Movimiento</dt><dd>Automático</dd></div>
-              <div><dt>Cristal</dt><dd>Zafiro</dd></div>
-            </dl>
-          </section>
-          <div class="product-cta">
-            <a href="catalogo.html" class="btn btn--outline">Volver al catálogo</a>
-          </div>
-        </article>
-      </div>
-    </article>
-
-    <!-- ===== Producto 13 ===== -->
-    <article id="prod-13" class="product-view">
-      <div class="grid grid-2">
-        <aside class="product-gallery">
-          <figure class="product-hero">
-            <img src="assets/img/reloj-13.jpg" alt="Deportivo 3 cronógrafo" class="zoomable">
-          </figure>
-        </aside>
-        <article class="product-info">
-          <header class="product-head">
-            <h1 class="page-title">Modelo Deportivo 3 • Cronógrafo</h1>
-            <div class="product-meta">
-              <span class="product-price">$3,400</span>
-              <span class="rating">★★★★★</span>
-              <span class="badge badge--stock">En stock</span>
-            </div>
-          </header>
-          <section class="product-specs">
-            <dl class="specs">
-              <div><dt>Material</dt><dd>Acero 316L</dd></div>
-              <div><dt>Tamaño</dt><dd>44 mm</dd></div>
-              <div><dt>Resistencia</dt><dd>10 ATM</dd></div>
-              <div><dt>Movimiento</dt><dd>Cronógrafo</dd></div>
-            </dl>
-          </section>
-          <div class="product-cta">
-            <a href="catalogo.html" class="btn btn--outline">Volver al catálogo</a>
-          </div>
-        </article>
-      </div>
-    </article>
-
-    <!-- ===== Producto 14 ===== -->
-    <article id="prod-14" class="product-view">
-      <div class="grid grid-2">
-        <aside class="product-gallery">
-          <figure class="product-hero">
-            <img src="assets/img/reloj-14.jpg" alt="Vintage 3 caja oscura" class="zoomable">
-          </figure>
-        </aside>
-        <article class="product-info">
-          <header class="product-head">
-            <h1 class="page-title">Modelo Vintage 3 • Caja oscura</h1>
-            <div class="product-meta">
-              <span class="product-price">$3,900</span>
-              <span class="rating">★★★★★</span>
-              <span class="badge badge--out">Agotado</span>
-            </div>
-          </header>
-          <section class="product-specs">
-            <dl class="specs">
-              <div><dt>Material</dt><dd>Acero pavonado</dd></div>
-              <div><dt>Tamaño</dt><dd>38 mm</dd></div>
-              <div><dt>Movimiento</dt><dd>Manual</dd></div>
-              <div><dt>Cristal</dt><dd>Mineral</dd></div>
-            </dl>
-          </section>
-          <div class="product-cta">
-            <a href="catalogo.html" class="btn btn--outline">Volver al catálogo</a>
-          </div>
-        </article>
-      </div>
-    </article>
-
-    <!-- ===== Producto 15 ===== -->
-    <article id="prod-15" class="product-view">
-      <div class="grid grid-2">
-        <aside class="product-gallery">
-          <figure class="product-hero">
-            <img src="assets/img/reloj-15.jpg" alt="Elegante 3 correa cuero negro" class="zoomable">
-          </figure>
-        </aside>
-        <article class="product-info">
-          <header class="product-head">
-            <h1 class="page-title">Modelo Elegante 3 • Cuero</h1>
-            <div class="product-meta">
-              <span class="product-price">$4,300</span>
-              <span class="rating">★★★★★</span>
-              <span class="badge badge--stock">En stock</span>
-            </div>
-          </header>
-          <section class="product-specs">
-            <dl class="specs">
-              <div><dt>Material</dt><dd>Acero 316L</dd></div>
-              <div><dt>Tamaño</dt><dd>41 mm</dd></div>
-              <div><dt>Cristal</dt><dd>Zafiro</dd></div>
-              <div><dt>Movimiento</dt><dd>Automático</dd></div>
-            </dl>
-          </section>
-          <div class="product-cta">
-            <a href="catalogo.html" class="btn btn--outline">Volver al catálogo</a>
-          </div>
-        </article>
-      </div>
-    </article>
-
-    <!-- ===== Producto 16 ===== -->
-    <article id="prod-16" class="product-view">
-      <div class="grid grid-2">
-        <aside class="product-gallery">
-          <figure class="product-hero">
-            <img src="assets/img/reloj-16.jpg" alt="Moderno 3 malla metálica" class="zoomable">
-          </figure>
-        </aside>
-        <article class="product-info">
-          <header class="product-head">
-            <h1 class="page-title">Modelo Moderno 3 • Malla metálica</h1>
-            <div class="product-meta">
-              <span class="product-price">$3,800</span>
-              <span class="rating">★★★★☆</span>
-              <span class="badge badge--stock">En stock</span>
-            </div>
-          </header>
-          <section class="product-specs">
-            <dl class="specs">
-              <div><dt>Material</dt><dd>Acero 316L</dd></div>
-              <div><dt>Tamaño</dt><dd>42 mm</dd></div>
-              <div><dt>Resistencia</dt><dd>5 ATM</dd></div>
-              <div><dt>Cristal</dt><dd>Zafiro</dd></div>
-            </dl>
-          </section>
-          <div class="product-cta">
-            <a href="catalogo.html" class="btn btn--outline">Volver al catálogo</a>
-          </div>
-        </article>
-      </div>
-    </article>
-
-    <!-- ===== Producto 17 ===== -->
-    <article id="prod-17" class="product-view">
-      <div class="grid grid-2">
-        <aside class="product-gallery">
-          <figure class="product-hero">
-            <img src="assets/img/reloj-17.jpg" alt="Clásico 4 plateado" class="zoomable">
-          </figure>
-        </aside>
-        <article class="product-info">
-          <header class="product-head">
-            <h1 class="page-title">Modelo Clásico 4 • Plateado</h1>
-            <div class="product-meta">
-              <span class="product-price">$3,100</span>
-              <span class="rating">★★★★★</span>
-              <span class="badge badge--stock">En stock</span>
-            </div>
-          </header>
-          <section class="product-specs">
-            <dl class="specs">
-              <div><dt>Material</dt><dd>Acero 316L</dd></div>
-              <div><dt>Tamaño</dt><dd>40 mm</dd></div>
-              <div><dt>Movimiento</dt><dd>Automático</dd></div>
-              <div><dt>Cristal</dt><dd>Mineral</dd></div>
-            </dl>
-          </section>
-          <div class="product-cta">
-            <a href="catalogo.html" class="btn btn--outline">Volver al catálogo</a>
-          </div>
-        </article>
-      </div>
-    </article>
-
-    <!-- ===== Producto 18 ===== -->
-    <article id="prod-18" class="product-view">
-      <div class="grid grid-2">
-        <aside class="product-gallery">
-          <figure class="product-hero">
-            <img src="assets/img/reloj-18.jpg" alt="Deportivo 4 correa caucho negro" class="zoomable">
-          </figure>
-        </aside>
-        <article class="product-info">
-          <header class="product-head">
-            <h1 class="page-title">Modelo Deportivo 4 • Caucho</h1>
-            <div class="product-meta">
-              <span class="product-price">$3,500</span>
-              <span class="rating">★★★★★</span>
-              <span class="badge badge--stock">En stock</span>
-            </div>
-          </header>
-          <section class="product-specs">
-            <dl class="specs">
-              <div><dt>Material</dt><dd>Acero 316L</dd></div>
-              <div><dt>Tamaño</dt><dd>44 mm</dd></div>
-              <div><dt>Resistencia</dt><dd>10 ATM</dd></div>
-              <div><dt>Movimiento</dt><dd>Cronógrafo</dd></div>
-            </dl>
-          </section>
-          <div class="product-cta">
-            <a href="catalogo.html" class="btn btn--outline">Volver al catálogo</a>
-          </div>
-        </article>
-      </div>
-    </article>
-
-    <!-- ===== Producto 19 ===== -->
-    <article id="prod-19" class="product-view">
-      <div class="grid grid-2">
-        <aside class="product-gallery">
-          <figure class="product-hero">
-            <img src="assets/img/reloj-19.jpg" alt="Vintage 4 dorado envejecido" class="zoomable">
-          </figure>
-        </aside>
-        <article class="product-info">
-          <header class="product-head">
-            <h1 class="page-title">Modelo Vintage 4 • Dorado</h1>
-            <div class="product-meta">
-              <span class="product-price">$4,000</span>
-              <span class="rating">★★★★★</span>
-              <span class="badge badge--out">Agotado</span>
-            </div>
-          </header>
-          <section class="product-specs">
-            <dl class="specs">
-              <div><dt>Material</dt><dd>Latón/baño oro</dd></div>
-              <div><dt>Tamaño</dt><dd>38 mm</dd></div>
-              <div><dt>Movimiento</dt><dd>Manual</dd></div>
-              <div><dt>Cristal</dt><dd>Mineral</dd></div>
-            </dl>
-          </section>
-          <div class="product-cta">
-            <a href="catalogo.html" class="btn btn--outline">Volver al catálogo</a>
-          </div>
-        </article>
-      </div>
-    </article>
-
-    <!-- ===== Producto 20 ===== -->
-    <article id="prod-20" class="product-view">
-      <div class="grid grid-2">
-        <aside class="product-gallery">
-          <figure class="product-hero">
-            <img src="assets/img/reloj-20.jpg" alt="Elegante 4 esfera negra" class="zoomable">
-          </figure>
-        </aside>
-        <article class="product-info">
-          <header class="product-head">
-            <h1 class="page-title">Modelo Elegante 4 • Esfera negra</h1>
-            <div class="product-meta">
-              <span class="product-price">$4,400</span>
-              <span class="rating">★★★★★</span>
-              <span class="badge badge--stock">En stock</span>
-            </div>
-          </header>
-          <section class="product-specs">
-            <dl class="specs">
-              <div><dt>Material</dt><dd>Acero 316L</dd></div>
-              <div><dt>Tamaño</dt><dd>41 mm</dd></div>
-              <div><dt>Cristal</dt><dd>Zafiro</dd></div>
-              <div><dt>Movimiento</dt><dd>Automático</dd></div>
-            </dl>
-          </section>
-          <div class="product-cta">
-            <a href="catalogo.html" class="btn btn--outline">Volver al catálogo</a>
-          </div>
-        </article>
-      </div>
-    </article>
-
-  </div>
-</section>
-
-
-    <!-- Galería -->
-    <aside class="product-gallery">
-      <figure class="product-hero">
-        <img src="assets/img/reloj-1.jpg" alt="Reloj LuxTime Modelo Clásico, vista frontal" class="zoomable">
-      </figure>
-
-      <div class="thumbs" role="list">
-        <button class="thumb" role="listitem" aria-label="Vista 1">
-          <img src="assets/img/reloj-1.jpg" alt="">
-        </button>
-        <button class="thumb" role="listitem" aria-label="Vista 2">
-          <img src="assets/img/reloj-2.jpg" alt="">
-        </button>
-        <button class="thumb" role="listitem" aria-label="Vista 3">
-          <img src="assets/img/reloj-3.jpg" alt="">
-        </button>
-        <button class="thumb" role="listitem" aria-label="Vista 4">
-          <img src="assets/img/reloj-4.jpg" alt="">
-        </button>
-      </div>
-    </aside>
-
-    <!-- Información -->
-    <article class="product-info">
-      <header class="product-head">
-        <h1 class="page-title">Modelo Clásico LuxTime</h1>
-        <div class="product-meta">
-          <span class="product-price">$2,800</span>
-          <span class="rating" aria-label="4.5 de 5">★★★★★</span>
-          <span class="badge badge--stock">En stock</span>
-        </div>
-      </header>
-
-      <section class="product-brief">
-        <p>Un reloj clásico con precisión excepcional y acabados premium.</p>
-      </section>
-
-      <!-- Especificaciones técnicas -->
-      <section class="product-specs">
-        <h2 class="visually-hidden">Especificaciones técnicas</h2>
-        <dl class="specs">
-          <div><dt>Material</dt><dd>Acero inoxidable 316L</dd></div>
-          <div><dt>Tamaño</dt><dd>41 mm</dd></div>
-          <div><dt>Peso</dt><dd>120 g</dd></div>
-          <div><dt>Resistencia al agua</dt><dd>10 ATM</dd></div>
-          <div><dt>Cristal</dt><dd>Zafiro antirreflejo</dd></div>
-        </dl>
-      </section>
-
-      <section class="product-custom">
-        <h2 class="section__title">Personaliza tu reloj</h2>
-
-        <div class="form">
-          
-          <label for="grabado" class="label">Grabado</label>
-          <select id="grabado" class="input">
-            <option value="">Sin grabado</option>
-            <option value="iniciales">Iniciales (3 caracteres)</option>
-            <option value="fecha">Fecha Especial</option>
-          </select>
-
-          <!-- CorreA (radios) -->
-          <fieldset class="strap-group">
-            <legend class="label">Correa</legend>
-            <label class="swatch">
-              <input type="radio" name="strap" checked>
-              <span class="swatch__chip" style="--sw:#2b2b2b" title="Cuero negro"></span>
-              <span class="swatch__name">Cuero negro</span>
-            </label>
-            <label class="swatch">
-              <input type="radio" name="strap">
-              <span class="swatch__chip" style="--sw:#6b3d22" title="Cuero marrón"></span>
-              <span class="swatch__name">Cuero marrón</span>
-            </label>
-            <label class="swatch">
-              <input type="radio" name="strap">
-              <span class="swatch__chip" style="--sw:#c0c0c0" title="Acero"></span>
-              <span class="swatch__name">Acero</span>
-            </label>
-          </fieldset>
-
-          <div class="product-cta">
-            <a href="catalogo.html" class="btn btn--outline">Volver al catálogo</a>
-            <a href="#" class="btn btn--primary">Añadir (simulado)</a>
-          </div>
-        </div>
-      </section>
-    </article>
-  </div>
-</section>
-
-<!-- Relacionados (carrusel simulado) -->
-<section class="section related">
-  <div class="container">
-    <h2 class="section__title">Relacionados</h2>
-    <div class="rail" role="list">
-      <article class="card product" role="listitem">
-        <div class="product__media">
-          <img src="assets/img/reloj-2.jpg" alt="Modelo Dorado">
-          <span class="badge badge--stock">En stock</span>
-        </div>
-        <div class="card__body">
-          <h3 class="product__name">Modelo Dorado</h3>
-          <div class="product__meta">
-            <span class="product__price">$3,200</span>
-            <span class="rating" aria-label="5 de 5">★★★★★</span>
-          </div>
-          <div class="product__actions">
-            <a href="producto.html" class="btn btn--outline">Ver detalles</a>
           </div>
         </div>
       </article>
 
-      <article class="card product" role="listitem">
-        <div class="product__media">
-          <img src="assets/img/reloj-3.jpg" alt="Modelo Minimal">
-          <span class="badge badge--stock">En stock</span>
-        </div>
-        <div class="card__body">
-          <h3 class="product__name">Modelo Minimal</h3>
-          <div class="product__meta">
-            <span class="product__price">$2,600</span>
-            <span class="rating" aria-label="4 de 5">★★★★☆</span>
-          </div>
-          <div class="product__actions">
-            <a href="producto.html" class="btn btn--outline">Ver detalles</a>
+      <article id="prod-2" class="product-view">
+        <div class="grid grid-2">
+          <aside class="product-gallery">
+            <figure><img src="assets/img/reloj-2.jpg" alt="Modelo Dorado"></figure>
+          </aside>
+          <div class="product-info">
+            <h1 class="page-title">Modelo Dorado • Malla metálica</h1>
+            <p>Diseño sofisticado con baño dorado y correa metálica ajustable. Perfecto para eventos formales.</p>
+            <p><strong>Precio:</strong> $3,200</p>
+            <a href="catalogo.html" class="btn btn--outline">Volver al catálogo</a>
           </div>
         </div>
+      </article>
+
+      <article id="prod-3" class="product-view">
+        <div class="grid grid-2">
+          <aside class="product-gallery">
+            <figure><img src="assets/img/reloj-3.jpg" alt="Modelo Deportivo"></figure>
+          </aside>
+          <div class="product-info">
+            <h1 class="page-title">Modelo Deportivo • Acero y caucho</h1>
+            <p>Reloj resistente al agua 10 ATM, con correa de caucho y cronógrafo deportivo de precisión.</p>
+            <p><strong>Precio:</strong> $2,500</p>
+            <a href="catalogo.html" class="btn btn--outline">Volver al catálogo</a>
+          </div>
+        </div>
+      </article>
+
+      <article id="prod-4" class="product-view">
+        <div class="grid grid-2">
+          <aside class="product-gallery">
+            <figure><img src="assets/img/reloj-4.jpg" alt="Modelo Vintage"></figure>
+          </aside>
+          <div class="product-info">
+            <h1 class="page-title">Modelo Vintage • Cuero marrón</h1>
+            <p>Inspirado en los diseños clásicos de los años 60, con caja de latón envejecido y movimiento manual.</p>
+            <p><strong>Precio:</strong> $3,000</p>
+            <a href="catalogo.html" class="btn btn--outline">Volver al catálogo</a>
+          </div>
+        </div>
+      </article>
+
+      <article id="prod-5" class="product-view">
+        <div class="grid grid-2">
+          <aside class="product-gallery">
+            <figure><img src="assets/img/reloj-5.jpg" alt="Modelo Elegante"></figure>
+          </aside>
+          <div class="product-info">
+            <h1 class="page-title">Modelo Elegante • Esfera blanca</h1>
+            <p>Minimalismo y lujo en un solo diseño. Caja de acero pulido y correa de cuero italiano.</p>
+            <p><strong>Precio:</strong> $4,000</p>
+            <a href="catalogo.html" class="btn btn--outline">Volver al catálogo</a>
+          </div>
+        </div>
+      </article>
+
+      <article id="prod-6" class="product-view">
+        <div class="grid grid-2">
+          <aside class="product-gallery">
+            <figure><img src="assets/img/reloj-6.jpg" alt="Modelo Moderno"></figure>
+          </aside>
+          <div class="product-info">
+            <h1 class="page-title">Modelo Moderno • Cuero negro</h1>
+            <p>Estilo actual con materiales premium. Cristal zafiro y mecanismo japonés de precisión.</p>
+            <p><strong>Precio:</strong> $3,500</p>
+            <a href="catalogo.html" class="btn btn--outline">Volver al catálogo</a>
+          </div>
+        </div>
+      </article>
+
+      <article id="prod-7" class="product-view">
+        <div class="grid grid-2">
+          <aside class="product-gallery">
+            <figure><img src="assets/img/reloj-7.jpg" alt="Modelo Clásico 2"></figure>
+          </aside>
+          <div class="product-info">
+            <h1 class="page-title">Modelo Clásico 2 • Esfera negra</h1>
+            <p>Reloj de líneas sobrias con esfera negra y acabado satinado. Ideal para uso diario y formal.</p>
+            <p><strong>Precio:</strong> $2,900</p>
+            <a href="catalogo.html" class="btn btn--outline">Volver al catálogo</a>
+          </div>
+        </div>
+      </article>
+
+      <article id="prod-8" class="product-view">
+        <div class="grid grid-2">
+          <aside class="product-gallery">
+            <figure><img src="assets/img/reloj-8.jpg" alt="Modelo Deportivo 2"></figure>
+          </aside>
+          <div class="product-info">
+            <h1 class="page-title">Modelo Deportivo 2 • Malla acero</h1>
+            <p>Diseño resistente para aventuras. Caja de acero 316L y correa tipo malla reforzada.</p>
+            <p><strong>Precio:</strong> $3,300</p>
+            <a href="catalogo.html" class="btn btn--outline">Volver al catálogo</a>
+          </div>
+        </div>
+      </article>
+
+      <article id="prod-9" class="product-view">
+        <div class="grid grid-2">
+          <aside class="product-gallery">
+            <figure><img src="assets/img/reloj-9.jpg" alt="Modelo Vintage 2"></figure>
+          </aside>
+          <div class="product-info">
+            <h1 class="page-title">Modelo Vintage 2 • Dorado</h1>
+            <p>Elegancia retro en tono dorado con movimiento manual y correa de cuero genuino.</p>
+            <p><strong>Precio:</strong> $3,800</p>
+            <a href="catalogo.html" class="btn btn--outline">Volver al catálogo</a>
+          </div>
+        </div>
+      </article>
+
+      <article id="prod-10" class="product-view">
+        <div class="grid grid-2">
+          <aside class="product-gallery">
+            <figure><img src="assets/img/reloj-10.jpg" alt="Modelo Elegante 2"></figure>
+          </aside>
+          <div class="product-info">
+            <h1 class="page-title">Modelo Elegante 2 • Acero pulido</h1>
+            <p>Diseño refinado con acabado espejo y movimiento automático suizo.</p>
+            <p><strong>Precio:</strong> $4,200</p>
+            <a href="catalogo.html" class="btn btn--outline">Volver al catálogo</a>
+          </div>
+        </div>
+      </article>
+      <!-- 11 -->
+      <article id="prod-11" class="product-view">
+        <div class="grid grid-2">
+          <aside class="product-gallery">
+            <figure><img src="assets/img/reloj-11.jpg" alt="Modelo Moderno 2"></figure>
+          </aside>
+          <div class="product-info">
+            <h1 class="page-title">Modelo Moderno 2 • Detalles cromados</h1>
+            <p>Reloj de acero inoxidable con detalles cromados y correa de cuero ajustable.</p>
+            <p><strong>Precio:</strong> $3,700</p>
+            <a href="catalogo.html" class="btn btn--outline">Volver al catálogo</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- 12 -->
+      <article id="prod-12" class="product-view">
+        <div class="grid grid-2">
+          <aside class="product-gallery">
+            <figure><img src="assets/img/reloj-12.jpg" alt="Modelo Clásico 3"></figure>
+          </aside>
+          <div class="product-info">
+            <h1 class="page-title">Modelo Clásico 3 • Azul marino</h1>
+            <p>Elegante reloj con fondo azul marino, bisel fino y correa texturizada. Ideal para uso ejecutivo.</p>
+            <p><strong>Precio:</strong> $3,000</p>
+            <a href="catalogo.html" class="btn btn--outline">Volver al catálogo</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- 13 -->
+      <article id="prod-13" class="product-view">
+        <div class="grid grid-2">
+          <aside class="product-gallery">
+            <figure><img src="assets/img/reloj-13.jpg" alt="Modelo Deportivo 3"></figure>
+          </aside>
+          <div class="product-info">
+            <h1 class="page-title">Modelo Deportivo 3 • Titanio</h1>
+            <p>Reloj ultraligero fabricado en titanio, cronómetro digital analógico y resistencia al agua 15 ATM.</p>
+            <p><strong>Precio:</strong> $3,400</p>
+            <a href="catalogo.html" class="btn btn--outline">Volver al catálogo</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- 14 -->
+      <article id="prod-14" class="product-view">
+        <div class="grid grid-2">
+          <aside class="product-gallery">
+            <figure><img src="assets/img/reloj-14.jpg" alt="Modelo Vintage 3"></figure>
+          </aside>
+          <div class="product-info">
+            <h1 class="page-title">Modelo Vintage 3 • Cobre antiguo</h1>
+            <p>Diseño retro con caja de cobre envejecido, numeración romana y correa artesanal.</p>
+            <p><strong>Precio:</strong> $3,900</p>
+            <a href="catalogo.html" class="btn btn--outline">Volver al catálogo</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- 15 -->
+      <article id="prod-15" class="product-view">
+        <div class="grid grid-2">
+          <aside class="product-gallery">
+            <figure><img src="assets/img/reloj-15.jpg" alt="Modelo Elegante 3"></figure>
+          </aside>
+          <div class="product-info">
+            <h1 class="page-title">Modelo Elegante 3 • Minimalista</h1>
+            <p>Reloj minimalista con esfera blanca, bisel delgado y correa de cuero italiano marrón oscuro.</p>
+            <p><strong>Precio:</strong> $4,300</p>
+            <a href="catalogo.html" class="btn btn--outline">Volver al catálogo</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- 16 -->
+      <article id="prod-16" class="product-view">
+        <div class="grid grid-2">
+          <aside class="product-gallery">
+            <figure><img src="assets/img/reloj-16.jpg" alt="Modelo Moderno 3"></figure>
+          </aside>
+          <div class="product-info">
+            <h1 class="page-title">Modelo Moderno 3 • Gris mate</h1>
+            <p>Combinación de diseño industrial y elegancia. Caja gris mate y detalles metálicos sutiles.</p>
+            <p><strong>Precio:</strong> $3,800</p>
+            <a href="catalogo.html" class="btn btn--outline">Volver al catálogo</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- 17 -->
+      <article id="prod-17" class="product-view">
+        <div class="grid grid-2">
+          <aside class="product-gallery">
+            <figure><img src="assets/img/reloj-17.jpg" alt="Modelo Clásico 4"></figure>
+          </aside>
+          <div class="product-info">
+            <h1 class="page-title">Modelo Clásico 4 • Piel marrón</h1>
+            <p>Un homenaje a la relojería tradicional. Movimiento automático y cristal antirreflejo.</p>
+            <p><strong>Precio:</strong> $3,100</p>
+            <a href="catalogo.html" class="btn btn--outline">Volver al catálogo</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- 18 -->
+      <article id="prod-18" class="product-view">
+        <div class="grid grid-2">
+          <aside class="product-gallery">
+            <figure><img src="assets/img/reloj-18.jpg" alt="Modelo Deportivo 4"></figure>
+          </aside>
+          <div class="product-info">
+            <h1 class="page-title">Modelo Deportivo 4 • Negro mate</h1>
+            <p>Diseño resistente para uso extremo. Caja reforzada y correa de silicona deportiva.</p>
+            <p><strong>Precio:</strong> $3,500</p>
+            <a href="catalogo.html" class="btn btn--outline">Volver al catálogo</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- 19 -->
+      <article id="prod-19" class="product-view">
+        <div class="grid grid-2">
+          <aside class="product-gallery">
+            <figure><img src="assets/img/reloj-19.jpg" alt="Modelo Vintage 4"></figure>
+          </aside>
+          <div class="product-info">
+            <h1 class="page-title">Modelo Vintage 4 • Cuerda manual</h1>
+            <p>Reloj de colección con cuerda manual y caja en acero pulido. Limitado a 200 unidades.</p>
+            <p><strong>Precio:</strong> $4,000</p>
+            <a href="catalogo.html" class="btn btn--outline">Volver al catálogo</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- 20 -->
+      <article id="prod-20" class="product-view">
+        <div class="grid grid-2">
+          <aside class="product-gallery">
+            <figure><img src="assets/img/reloj-20.jpg" alt="Modelo Elegante 4"></figure>
+          </aside>
+          <div class="product-info">
+            <h1 class="page-title">Modelo Elegante 4 • Esfera negra</h1>
+            <p>Reloj de lujo con cristal zafiro, correa de acero y resistencia al agua de 10 ATM.</p>
+            <p><strong>Precio:</strong> $4,400</p>
+            <a href="catalogo.html" class="btn btn--outline">Volver al catálogo</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- 🔸 Bloque por defecto -->
+      <article id="default">
+        <h1 class="page-title">Selecciona un modelo</h1>
+        <p>Elige un reloj en el <a href="catalogo.html">catálogo</a> para ver sus detalles.</p>
       </article>
     </div>
-  </div>
-</section>
-
-    <section class="section">
-      <div class="container">
-        <h1 class="page-title">Detalle del Producto</h1>
-        <p class="lead">Descubre las especificaciones, materiales y opciones de personalización.</p>
-      </div>
-    </section>
   </main>
 
   <footer class="site-footer">
@@ -832,3 +347,4 @@
   </footer>
 </body>
 </html>
+
