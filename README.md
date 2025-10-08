@@ -44,3 +44,6 @@ Abrir `index.html` en el navegador.
 ## Autoría
 - **Desarrollado por:** Samuel Pallares  
 - **Contacto:** contacto@luxtime.co
+
+## Link de la web
+link: https://luxtimesamp.netlify.app/

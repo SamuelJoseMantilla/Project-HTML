@@ -247,3 +247,13 @@
   object-position: center;
   border-radius: 8px;
 }
+
+.product-view { display: none; }          /* Oculta todos por defecto */
+.product-view:target { display: block; }  /* Muestra solo el seleccionado */
+
+/* Solo si NO hay hash (#) en la URL, muestra el primero */
+:root:not(:has(:target)) .product-views .product-view:first-of-type {
+  display: block;
+}
+
+.product-view:target .product-hero .zoomable{transform:scale(1.02)}
