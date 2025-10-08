@@ -257,3 +257,60 @@
 }
 
 .product-view:target .product-hero .zoomable{transform:scale(1.02)}
+
+/* Mostrar solo el detalle activo */
+.product-view{ display:none; }
+.product-view:target{ display:block; }
+/* Si entras sin hash (#), muestra el primero (opcional) */
+:root:not(:has(:target)) .product-views .product-view:first-of-type{ display:block; }
+
+/* Hero del producto: foto grande contenida */
+.product-hero img{
+  width:100%;
+  height:clamp(260px, 42vw, 520px);
+  object-fit:contain;
+  display:block;
+}
+
+/* Galería de miniaturas del mismo producto */
+.product-thumbs{
+  margin-top:.75rem;
+  display:grid;
+  gap:.6rem;
+  grid-template-columns: repeat(4, 1fr);
+}
+.product-thumbs figure{
+  border:1px solid rgba(255,255,255,.12);
+  border-radius:10px;
+  overflow:hidden;
+}
+.product-thumbs img{
+  width:100%;
+  aspect-ratio:1/1;       /* cuadrados */
+  object-fit:cover;       /* todas iguales visualmente */
+  display:block;
+}
+
+/* Grid de “Más modelos” (sin carrusel) */
+.related-grid{
+  display:grid; gap:1rem;
+  grid-template-columns: repeat(2, 1fr);
+  margin-top:1rem;
+}
+.related-card{
+  border:1px solid rgba(255,255,255,.12);
+  border-radius:14px;
+  overflow:hidden;
+  background: rgba(255,255,255,.04);
+}
+.related-card img{
+  width:100%; height:160px; object-fit:cover; display:block;
+}
+.related-card .info{ padding:.75rem .9rem; display:grid; gap:.3rem; }
+.related-card .name{ font-weight:600; }
+.related-card .price{ font-weight:700; }
+
+@media (min-width: 769px){
+  .related-grid{ grid-template-columns: repeat(3, 1fr); }
+  .related-card img{ height:200px; }
+}
